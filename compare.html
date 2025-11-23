@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Tools Directory – Comparison</title>
+
+  <meta name="description" content="Professional comparison of AI tools such as ChatGPT, Claude, Gemini and Copilot. See features, performance, pricing and use cases on a single page.">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    :root {
+      --bg-page: #f5f5f7;
+      --bg-card: #ffffff;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --border-subtle: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: #eff4ff;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --shadow-soft: 0 14px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg-page);
+      color: var(--text-main);
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .notranslate {
+      /* Google Translate için işaret */
+    }
+
+    /* HEADER / NAV */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #2563eb, #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .logo-text-main {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .logo-text-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+      margin-left: 28px;
+    }
+
+    nav a {
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      color: var(--text-muted);
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--text-main);
+      border-color: var(--accent);
+    }
+
+    /* PAGE WRAPPER */
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    /* HERO */
+    .hero {
+      margin-bottom: 26px;
+    }
+
+    .hero-title {
+      font-size: clamp(26px, 4vw, 34px);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 620px;
+      line-height: 1.6;
+    }
+
+    /* SUMMARY GRID */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .summary-card {
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      padding: 14px 14px 14px 16px;
+      font-size: 12px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-height: 90px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+
+    .summary-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      bottom: 10px;
+      width: 3px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .summary-card:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+    }
+
+    .summary-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .summary-main {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .summary-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* GENERIC SECTION */
+    .comparison-section {
+      margin-top: 26px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .section-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      max-width: 520px;
+    }
+
+    /* TABLE CARD */
+    .table-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      padding: 16px 16px 18px;
+      margin-bottom: 18px;
+    }
+
+    .table-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .table-card-title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .table-card-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .table-tag {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      border-radius: var(--radius-md);
+      border: 1px solid #e5e7eb;
+    }
+
+    table {
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+      background: #ffffff;
+      font-size: 13px;
+    }
+
+    th, td {
+      padding: 11px 12px;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    th {
+      background: #f9fafb;
+      font-size: 12px;
+      color: #4b5563;
+      font-weight: 600;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background: #f3f4ff;
+    }
+
+    /* CHART CARD */
+    .chart-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      padding: 16px 16px 20px;
+      margin-top: 6px;
+    }
+
+    .chart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .chart-title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .chart-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 30px;
+      padding-top: 14px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    footer a {
+      color: var(--accent);
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1000px) {
+      .summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+      .nav-inner { flex-wrap: wrap; }
+      .page { padding-inline: 12px; }
+      .summary-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="nav-left">
+      <div class="logo-icon notranslate" translate="no">AI</div>
+      <div>
+        <div class="logo-text-main notranslate" translate="no">AI Tools Directory</div>
+        <div class="logo-text-sub">Discover & Compare AI Tools</div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#popular">Tools</a></li>
+          <li><a href="comparison.html" class="active">Compare</a></li>
+          <li><a href="index.html#trends">Trends</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#footer">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <!-- HERO -->
+  <section class="hero">
+    <h1 class="hero-title">AI Tools Complete Professional Comparison</h1>
+    <p class="hero-subtitle">
+      Compare
+      <span class="notranslate" translate="no">ChatGPT</span>,
+      <span class="notranslate" translate="no">Claude</span>,
+      <span class="notranslate" translate="no">Gemini</span>
+      and
+      <span class="notranslate" translate="no">Copilot</span>
+      across features, performance, pricing and real-world use cases. Numbers are indicative and for educational purposes only.
+    </p>
+
+    <div class="summary-grid">
+      <div class="summary-card">
+        <div class="summary-label">Best overall</div>
+        <div class="summary-main notranslate" translate="no">ChatGPT</div>
+        <div class="summary-sub">General-purpose usage</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-label">Best for long docs</div>
+        <div class="summary-main notranslate" translate="no">Claude</div>
+        <div class="summary-sub">Long documents & context</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-label">Fast &amp; connected</div>
+        <div class="summary-main notranslate" translate="no">Gemini</div>
+        <div class="summary-sub">Search &amp; Google ecosystem</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-label">Best for coding</div>
+        <div class="summary-main notranslate" translate="no">Copilot</div>
+        <div class="summary-sub">Developer &amp; IDE workflows</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1. OVERVIEW TABLE -->
+  <section class="comparison-section">
+    <div class="section-header">
+      <h2 class="section-title">1. General Overview</h2>
+    </div>
+
+    <div class="table-card">
+      <div class="table-card-header">
+        <div>
+          <div class="table-card-title">Tool summary table</div>
+          <div class="table-card-sub">High-level view of purpose, quality and main strengths.</div>
+        </div>
+        <span class="table-tag">Overview</span>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Tool</th>
+              <th>Main Features</th>
+              <th>Pricing</th>
+              <th>Quality</th>
+              <th>Speed</th>
+              <th>Strengths</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="notranslate" translate="no">ChatGPT</td>
+              <td>Text generation, reasoning, analysis</td>
+              <td>Free / Plus / Team</td>
+              <td>★★★★★</td>
+              <td>★★★★★</td>
+              <td>Natural dialogue, strong reasoning</td>
+            </tr>
+            <tr>
+              <td class="notranslate" translate="no">Claude</td>
+              <td>Long text processing, analysis</td>
+              <td>Paid</td>
+              <td>★★★★☆</td>
+              <td>★★★★☆</td>
+              <td>Accurate long-document handling</td>
+            </tr>
+            <tr>
+              <td class="notranslate" translate="no">Gemini</td>
+              <td>Multimodal, Google Search integration</td>
+              <td>Free / Premium</td>
+              <td>★★★★☆</td>
+              <td>★★★★★</td>
+              <td>Very fast responses &amp; search link</td>
+            </tr>
+            <tr>
+              <td class="notranslate" translate="no">Copilot</td>
+              <td>Coding, Microsoft integration</td>
+              <td>Free / Pro</td>
+              <td>★★★★☆</td>
+              <td>★★★☆☆</td>
+              <td>Excellent for development workflows</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. PERFORMANCE TABLE -->
+  <section class="comparison-section">
+    <div class="section-header">
+      <h2 class="section-title">2. Model Performance</h2>
+    </div>
+
+    <div class="table-card">
+      <div class="table-card-header">
+        <div>
+          <div class="table-card-title">Performance breakdown</div>
+          <div class="table-card-sub">Percentages reflect relative strength across categories.</div>
+        </div>
+        <span class="table-tag">Performance</span>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Tool</th>
+              <th>Accuracy</th>
+              <th>Reasoning</th>
+              <th>Creativity</th>
+              <th>Coding</th>
+              <th>Multimodal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="notranslate" translate="no">ChatGPT</td>
+              <td>95%</td>
+              <td>96%</td>
+              <td>94%</td>
+              <td>93%</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td class="notranslate" translate="no">Claude</td>
+              <td>93%</td>
+              <td>94%</td>
+              <td>89%</td>
+              <td>91%</td>
+              <td>Partial</td>
+            </tr>
+            <tr>
+              <td class="notranslate" translate="no">Gemini</td>
+              <td>92%</td>
+              <td>89%</td>
+              <td>95%</td>
+              <td>88%</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td class="notranslate" translate="no">Copilot</td>
+              <td>88%</td>
+              <td>82%</td>
+              <td>78%</td>
+              <td>96%</td>
+              <td>No</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PRICING TABLE -->
+  <section class="comparison-section">
+    <div class="section-header">
+      <h2 class="section-title">3. Pricing Overview</h2>
+    </div>
+
+    <div class="table-card">
+      <div class="table-card-header">
+        <div>
+          <div class="table-card-title">Plans &amp; costs</div>
+          <div class="table-card-sub">Rough monthly pricing and API billing model.</div>
+        </div>
+        <span class="table-tag">Pricing</span>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Tool</th>
+              <th>Free Plan</th>
+              <th>Paid Plan</th>
+              <th>Monthly Cost (approx.)</th>
+              <th>API Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="notranslate" translate="no">ChatGPT</td>
+              <td>Yes</td>
+              <td>Plus / Team</td>
+              <td>$20–$25</td>
+              <td>Paid per token</td>
+            </tr>
+            <tr>
+              <td class="notranslate" translate="no">Claude</td>
+              <td>Limited</td>
+              <td>Pro</td>
+              <td>≈$20</td>
+              <td>Paid per token</td>
+            </tr>
+            <tr>
+              <td class="notranslate" translate="no">Gemini</td>
+              <td>Yes</td>
+              <td>Advanced</td>
+              <td>≈$19.99</td>
+              <td>Paid per token</td>
+            </tr>
+            <tr>
+              <td class="notranslate" translate="no">Copilot</td>
+              <td>Yes</td>
+              <td>Pro</td>
+              <td>≈$10</td>
+              <td>Paid per token</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. FEATURE MATRIX -->
+  <section class="comparison-section">
+    <div class="section-header">
+      <h2 class="section-title">4. Feature Matrix</h2>
+    </div>
+
+    <div class="table-card">
+      <div class="table-card-header">
+        <div>
+          <div class="table-card-title">Capability availability</div>
+          <div class="table-card-sub">Simple yes / no overview for core features.</div>
+        </div>
+        <span class="table-tag">Features</span>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th><span class="notranslate" translate="no">ChatGPT</span></th>
+              <th><span class="notranslate" translate="no">Claude</span></th>
+              <th><span class="notranslate" translate="no">Gemini</span></th>
+              <th><span class="notranslate" translate="no">Copilot</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Web browsing</td>
+              <td>✔</td>
+              <td>✔</td>
+              <td>✔</td>
+              <td>✖</td>
+            </tr>
+            <tr>
+              <td>Image generation</td>
+              <td>✔</td>
+              <td>✖</td>
+              <td>✔</td>
+              <td>✖</td>
+            </tr>
+            <tr>
+              <td>Code generation</td>
+              <td>✔</td>
+              <td>✔</td>
+              <td>✔</td>
+              <td>✔</td>
+            </tr>
+            <tr>
+              <td>Multimodal input</td>
+              <td>✔</td>
+              <td>Partial</td>
+              <td>✔</td>
+              <td>✖</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. USE CASE TABLE -->
+  <section class="comparison-section">
+    <div class="section-header">
+      <h2 class="section-title">5. Recommended Use Cases</h2>
+    </div>
+
+    <div class="table-card">
+      <div class="table-card-header">
+        <div>
+          <div class="table-card-title">Best tool by scenario</div>
+          <div class="table-card-sub">Use this as a starting point, not a strict rule.</div>
+        </div>
+        <span class="table-tag">Use cases</span>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Use case</th>
+              <th>Best tool</th>
+              <th>Why?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Chat &amp; general conversation</td>
+              <td class="notranslate" translate="no">ChatGPT</td>
+              <td>Very natural dialogue and versatile answers</td>
+            </tr>
+            <tr>
+              <td>Long document work</td>
+              <td class="notranslate" translate="no">Claude</td>
+              <td>Focused on long-context reading and analysis</td>
+            </tr>
+            <tr>
+              <td>Fast, real-time search</td>
+              <td class="notranslate" translate="no">Gemini</td>
+              <td>Strong integration with Google ecosystem</td>
+            </tr>
+            <tr>
+              <td>Coding assistance</td>
+              <td class="notranslate" translate="no">Copilot</td>
+              <td>Deep IDE integration and developer tooling</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHART -->
+  <section class="comparison-section">
+    <div class="chart-card">
+      <div class="chart-header">
+        <div>
+          <div class="chart-title">Visual Performance Comparison</div>
+          <div class="chart-sub">
+            Radar chart showing relative scores across accuracy, reasoning, creativity,
+            coding and speed.
+          </div>
+        </div>
+      </div>
+      <canvas id="aiComparisonChart"></canvas>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <span>© 2025 AI Tools Directory. All rights reserved.</span>
+    <span><a href="#top">Back to top</a></span>
+  </footer>
+</main>
+
+<!-- CHART SCRIPT -->
+<script>
+  const ctx = document.getElementById('aiComparisonChart');
+
+  new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels: ['Accuracy', 'Reasoning', 'Creativity', 'Coding', 'Speed'],
+      datasets: [
+        {
+          label: 'ChatGPT',
+          data: [95, 96, 94, 93, 95],
+          borderWidth: 2,
+          fill: true
+        },
+        {
+          label: 'Claude',
+          data: [93, 94, 89, 91, 89],
+          borderWidth: 2,
+          fill: true
+        },
+        {
+          label: 'Gemini',
+          data: [92, 89, 95, 88, 98],
+          borderWidth: 2,
+          fill: true
+        },
+        {
+          label: 'Copilot',
+          data: [88, 82, 78, 96, 75],
+          borderWidth: 2,
+          fill: true
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top'
+        }
+      },
+      scales: {
+        r: {
+          angleLines: { color: '#d1d5db' },
+          grid: { color: '#e5e7eb' },
+          pointLabels: { color: '#4b5563', font: { size: 11 } },
+          suggestedMin: 70,
+          suggestedMax: 100
+        }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>

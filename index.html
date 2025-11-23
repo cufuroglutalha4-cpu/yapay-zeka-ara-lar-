@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Tools Directory – Find the Right AI Tool</title>
+
+  <meta name="description" content="Discover and compare AI tools for chat, coding, images, video and productivity. Find the right AI tool for your workflow.">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-page: #f5f5f7;
+      --bg-card: #ffffff;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --border-subtle: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: #eff4ff;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --shadow-soft: 0 14px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg-page);
+      color: var(--text-main);
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .notranslate {
+      /* Google Translate için işaret, görsel değişiklik yok */
+    }
+
+    /* HEADER / NAV */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #2563eb, #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .logo-text-main {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .logo-text-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+      margin-left: 28px;
+    }
+
+    nav a {
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      color: var(--text-muted);
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--text-main);
+      border-color: var(--accent);
+    }
+
+    /* PAGE WRAPPER */
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    /* HERO HOME */
+    .hero-home {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 28px;
+      margin-bottom: 32px;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: clamp(28px, 4.4vw, 40px);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 540px;
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+
+    /* HERO SIDE CARD */
+    .hero-side-card {
+      background: #111827;
+      color: #f9fafb;
+      border-radius: var(--radius-lg);
+      padding: 16px 16px 18px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.4);
+      font-size: 13px;
+    }
+
+    .hero-side-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.7;
+      margin-bottom: 4px;
+    }
+
+    .hero-side-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .hero-side-list {
+      list-style: none;
+      display: grid;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .hero-side-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      font-size: 12px;
+    }
+
+    .hero-side-list span.name {
+      opacity: 0.9;
+    }
+
+    .hero-side-list span.badge {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(248, 250, 252, 0.1);
+    }
+
+    /* HOME SECTIONS */
+    .home-section {
+      margin-top: 26px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .section-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* TOOL GRID */
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .tool-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      padding: 12px 12px 13px;
+      box-shadow: var(--shadow-soft);
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+    }
+
+    .tool-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tool-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: #eff4ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    .tool-name-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tool-name {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .tool-badge {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .tool-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .tool-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .tool-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 2px;
+    }
+
+    .tool-tag {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 999px;
+      background: #f3f4ff;
+      color: #4b5563;
+    }
+
+    /* Link stili: "→ View in comparison" */
+    .tool-meta-row a.tool-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 11px;
+    }
+
+    .tool-meta-row a.tool-link:hover {
+      text-decoration: underline;
+    }
+
+    /* CATEGORY CHIPS / CARDS */
+    .category-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .category-chip {
+      font-size: 11px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .category-chip span.emoji {
+      font-size: 14px;
+    }
+
+    .category-chip a.category-ai-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 11px;
+    }
+
+    .category-chip a.category-ai-link:hover {
+      text-decoration: underline;
+    }
+
+    /* COMPARISON PREVIEW */
+    .comparison-preview {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      padding: 16px 16px 18px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 18px;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .comparison-list {
+      list-style: none;
+      display: grid;
+      gap: 6px;
+      margin-top: 6px;
+      font-size: 12px;
+    }
+
+    .comparison-list li {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+    }
+
+    .comparison-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .comparison-cta button {
+      border: none;
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      background: var(--accent);
+      color: #f9fafb;
+    }
+
+    .comparison-cta span {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 30px;
+      padding-top: 14px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    footer a {
+      color: var(--accent);
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1000px) {
+      .hero-home {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .tool-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .comparison-preview {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+      .nav-inner { flex-wrap: wrap; }
+      .page { padding-inline: 12px; }
+      .tool-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="nav-left">
+      <div class="logo-icon notranslate" translate="no">AI</div>
+      <div>
+        <div class="logo-text-main notranslate" translate="no">AI Tools Directory</div>
+        <div class="logo-text-sub">Discover & Compare AI Tools</div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="tools.html">Tools</a></li>
+          <li><a href="comparison.html">Compare</a></li>
+          <li><a href="trends.html">Trends</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <!-- HERO -->
+  <section class="hero-home">
+    <div>
+      <h1 class="hero-title">Find the right AI tool for every task.</h1>
+      <p class="hero-subtitle">
+        Search and explore AI tools for chat, coding, images, video and productivity.
+        Quickly see what each tool is good at before you subscribe.
+      </p>
+    </div>
+
+    <aside class="hero-side-card">
+      <div class="hero-side-label">Snapshot</div>
+      <div class="hero-side-title">Top AI tools today</div>
+      <ul class="hero-side-list">
+        <li>
+          <span class="name notranslate" translate="no">ChatGPT</span>
+          <span class="badge">General AI chat</span>
+        </li>
+        <li>
+          <span class="name notranslate" translate="no">Claude</span>
+          <span class="badge">Long documents</span>
+        </li>
+        <li>
+          <span class="name notranslate" translate="no">Gemini</span>
+          <span class="badge">Search & Google</span>
+        </li>
+        <li>
+          <span class="name notranslate" translate="no">Copilot</span>
+          <span class="badge">Coding & IDE</span>
+        </li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- POPULAR TOOLS -->
+  <section id="popular" class="home-section">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Popular AI tools</h2>
+        <p class="section-sub">A quick view of well-known AI tools across categories.</p>
+      </div>
+    </div>
+
+    <div class="tool-grid">
+      <!-- ChatGPT -->
+      <article class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon">💬</div>
+          <div>
+            <div class="tool-name-row">
+              <span class="tool-name notranslate" translate="no">ChatGPT</span>
+              <span class="tool-badge">AI chat</span>
+            </div>
+            <div class="tool-desc">
+              General-purpose AI assistant for chat, writing and analysis.
+            </div>
+          </div>
+        </div>
+        <div class="tool-tags">
+          <span class="tool-tag">Free & Plus</span>
+          <span class="tool-tag">Multimodal</span>
+        </div>
+        <div class="tool-meta-row">
+          <span>⭐ High reasoning</span>
+          <a href="comparison.html" class="tool-link">→ View in comparison</a>
+        </div>
+      </article>
+
+      <!-- Claude -->
+      <article class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon">📄</div>
+          <div>
+            <div class="tool-name-row">
+              <span class="tool-name notranslate" translate="no">Claude</span>
+              <span class="tool-badge">Long text</span>
+            </div>
+            <div class="tool-desc">
+              Strong at reading and working with long documents.
+            </div>
+          </div>
+        </div>
+        <div class="tool-tags">
+          <span class="tool-tag">Analysis</span>
+          <span class="tool-tag">Long context</span>
+        </div>
+        <div class="tool-meta-row">
+          <span>⭐ Deep analysis</span>
+          <a href="comparison.html" class="tool-link">→ View in comparison</a>
+        </div>
+      </article>
+
+      <!-- Gemini -->
+      <article class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon">⚡</div>
+          <div>
+            <div class="tool-name-row">
+              <span class="tool-name notranslate" translate="no">Gemini</span>
+              <span class="tool-badge">Search</span>
+            </div>
+            <div class="tool-desc">
+              Fast multimodal model with Google Search integration.
+            </div>
+          </div>
+        </div>
+        <div class="tool-tags">
+          <span class="tool-tag">Google</span>
+          <span class="tool-tag">Multimodal</span>
+        </div>
+        <div class="tool-meta-row">
+          <span>⭐ Very fast</span>
+          <a href="comparison.html" class="tool-link">→ View in comparison</a>
+        </div>
+      </article>
+
+      <!-- Copilot -->
+      <article class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon">🧑‍💻</div>
+          <div>
+            <div class="tool-name-row">
+              <span class="tool-name notranslate" translate="no">Copilot</span>
+              <span class="tool-badge">Coding</span>
+            </div>
+            <div class="tool-desc">
+              Integrated in IDEs and editors for code suggestions.
+            </div>
+          </div>
+        </div>
+        <div class="tool-tags">
+          <span class="tool-tag">VS Code</span>
+          <span class="tool-tag">GitHub</span>
+        </div>
+        <div class="tool-meta-row">
+          <span>⭐ Coding focus</span>
+          <a href="comparison.html" class="tool-link">→ View in comparison</a>
+        </div>
+      </article>
+
+      <!-- Midjourney -->
+      <article class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon">🎨</div>
+          <div>
+            <div class="tool-name-row">
+              <span class="tool-name notranslate" translate="no">Midjourney</span>
+              <span class="tool-badge">Image</span>
+            </div>
+            <div class="tool-desc">
+              Text-to-image tool for high quality visuals and art.
+            </div>
+          </div>
+        </div>
+        <div class="tool-tags">
+          <span class="tool-tag">Discord</span>
+          <span class="tool-tag">Illustration</span>
+        </div>
+        <div class="tool-meta-row">
+          <span>⭐ Creative images</span>
+        </div>
+      </article>
+
+      <!-- DALL·E -->
+      <article class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon">🖼️</div>
+          <div>
+            <div class="tool-name-row">
+              <span class="tool-name notranslate" translate="no">DALL·E</span>
+              <span class="tool-badge">Image</span>
+            </div>
+            <div class="tool-desc">
+              Image generation integrated with
+              <span class="notranslate" translate="no">ChatGPT</span>
+              and other apps.
+            </div>
+          </div>
+        </div>
+        <div class="tool-tags">
+          <span class="tool-tag">OpenAI</span>
+          <span class="tool-tag">Art & design</span>
+        </div>
+        <div class="tool-meta-row">
+          <span>⭐ Easy to use</span>
+        </div>
+      </article>
+
+      <!-- Runway -->
+      <article class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon">🎬</div>
+          <div>
+            <div class="tool-name-row">
+              <span class="tool-name notranslate" translate="no">Runway</span>
+              <span class="tool-badge">Video</span>
+            </div>
+            <div class="tool-desc">
+              AI-first video editing and generative video tools.
+            </div>
+          </div>
+        </div>
+        <div class="tool-tags">
+          <span class="tool-tag">Video</span>
+          <span class="tool-tag">Editing</span>
+        </div>
+        <div class="tool-meta-row">
+          <span>⭐ Video workflows</span>
+        </div>
+      </article>
+
+      <!-- Notion AI -->
+      <article class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon">📝</div>
+          <div>
+            <div class="tool-name-row">
+              <span class="tool-name notranslate" translate="no">Notion AI</span>
+              <span class="tool-badge">Productivity</span>
+            </div>
+            <div class="tool-desc">
+              AI features built into notes, docs and task management.
+            </div>
+          </div>
+        </div>
+        <div class="tool-tags">
+          <span class="tool-tag">Notes</span>
+          <span class="tool-tag">Workspace</span>
+        </div>
+        <div class="tool-meta-row">
+          <span>⭐ Inside Notion</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="home-section" id="categories">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Browse by category</h2>
+        <p class="section-sub">Jump directly into the type of AI tool you are looking for.</p>
+      </div>
+    </div>
+
+    <div class="category-row">
+      <div class="category-chip">
+        <span class="emoji">💬</span>
+        <span>
+          AI chat & assistants ·
+          <a href="https://chatgpt.com" target="_blank" rel="noopener" class="category-ai-link notranslate" translate="no">
+            ChatGPT
+          </a>
+        </span>
+      </div>
+      <div class="category-chip">
+        <span class="emoji">🧑‍💻</span>
+        <span>
+          Coding & development ·
+          <a href="https://github.com/features/copilot" target="_blank" rel="noopener" class="category-ai-link notranslate" translate="no">
+            Copilot
+          </a>
+        </span>
+      </div>
+      <div class="category-chip">
+        <span class="emoji">🎨</span>
+        <span>
+          Image & design ·
+          <a href="https://www.midjourney.com" target="_blank" rel="noopener" class="category-ai-link notranslate" translate="no">
+            Midjourney
+          </a>
+        </span>
+      </div>
+      <div class="category-chip">
+        <span class="emoji">🎬</span>
+        <span>
+          Video & motion ·
+          <a href="https://runwayml.com" target="_blank" rel="noopener" class="category-ai-link notranslate" translate="no">
+            Runway
+          </a>
+        </span>
+      </div>
+      <div class="category-chip">
+        <span class="emoji">🎧</span>
+        <span>
+          Audio & voice ·
+          <a href="https://elevenlabs.io" target="_blank" rel="noopener" class="category-ai-link notranslate" translate="no">
+            ElevenLabs
+          </a>
+        </span>
+      </div>
+      <div class="category-chip">
+        <span class="emoji">📈</span>
+        <span>
+          Analytics & data ·
+          <a href="https://chatgpt.com" target="_blank" rel="noopener" class="category-ai-link notranslate" translate="no">
+            ChatGPT
+          </a>
+        </span>
+      </div>
+      <div class="category-chip">
+        <span class="emoji">📣</span>
+        <span>
+          Marketing & SEO ·
+          <a href="https://www.jasper.ai" target="_blank" rel="noopener" class="category-ai-link notranslate" translate="no">
+            Jasper
+          </a>
+        </span>
+      </div>
+      <div class="category-chip">
+        <span class="emoji">🧠</span>
+        <span>
+          Research & knowledge ·
+          <a href="https://www.perplexity.ai" target="_blank" rel="noopener" class="category-ai-link notranslate" translate="no">
+            Perplexity
+          </a>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRENDS / COMPARISON PREVIEW -->
+  <section class="home-section" id="trends">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Latest comparisons</h2>
+        <p class="section-sub">See how leading AI tools stack up against each other.</p>
+      </div>
+    </div>
+
+    <div class="comparison-preview">
+      <div>
+        <h3 style="font-size:15px; margin-bottom:4px;">
+          <span class="notranslate" translate="no">ChatGPT</span>
+          vs
+          <span class="notranslate" translate="no">Claude</span>
+          vs
+          <span class="notranslate" translate="no">Gemini</span>
+          vs
+          <span class="notranslate" translate="no">Copilot</span>
+        </h3>
+        <p style="font-size:13px; color:var(--text-muted);">
+          We compare four popular models across accuracy, reasoning, creativity, coding
+          and pricing.
+        </p>
+        <ul class="comparison-list">
+          <li>• Overall strengths and weaknesses</li>
+          <li>• Informal performance scores by category</li>
+          <li>• Feature matrix (web, images, code, multimodal)</li>
+          <li>• Recommended use cases for each model</li>
+        </ul>
+      </div>
+
+      <div class="comparison-cta">
+        <a href="comparison.html">
+          <button type="button">Open full comparison</button>
+        </a>
+        <span>View detailed tables and a radar chart with relative scores.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <span>© 2025 AI Tools Directory. All rights reserved.</span>
+    <span><a href="comparison.html">Compare AI models</a></span>
+  </footer>
+</main>
+
+</body>
+</html>

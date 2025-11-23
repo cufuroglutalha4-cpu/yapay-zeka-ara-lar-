@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Tools Directory – Trends</title>
+
+  <meta name="description" content="High-level overview of current AI trends: general-purpose models, specialised tools and how people combine them in workflows.">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-page: #f5f5f7;
+      --bg-card: #ffffff;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --border-subtle: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: #eff4ff;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --shadow-soft: 0 14px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg-page);
+      color: var(--text-main);
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .notranslate { }
+
+    /* HEADER / NAV */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #2563eb, #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .logo-text-main {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .logo-text-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+      margin-left: 28px;
+    }
+
+    nav a {
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      color: var(--text-muted);
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--text-main);
+      border-color: var(--accent);
+    }
+
+    /* PAGE WRAPPER */
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    /* HERO */
+    .trends-hero {
+      margin-bottom: 24px;
+    }
+
+    .trends-kicker {
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .trends-title {
+      font-size: clamp(26px, 4vw, 34px);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .trends-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 680px;
+      line-height: 1.6;
+    }
+
+    .trends-label-row {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 11px;
+    }
+
+    .trends-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: #ffffff;
+      color: var(--text-muted);
+      box-shadow: var(--shadow-soft);
+    }
+
+    /* HIGHLIGHT GRID */
+    .trend-highlight-grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: 2fr 1.6fr;
+      gap: 16px;
+    }
+
+    .trend-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      padding: 16px 16px 18px;
+      font-size: 13px;
+    }
+
+    .trend-card-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    .trend-card-title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .trend-card-label {
+      font-size: 11px;
+      color: var(--accent);
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+    }
+
+    .trend-card-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .trend-list {
+      list-style: none;
+      font-size: 12px;
+      color: var(--text-muted);
+      display: grid;
+      gap: 4px;
+    }
+
+    .trend-list span.model {
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .trend-mini-note {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* LANDSCAPE SECTION */
+    .landscape-section {
+      margin-top: 28px;
+    }
+
+    .section-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .section-note {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .landscape-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1.6fr;
+      gap: 16px;
+    }
+
+    .landscape-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      padding: 14px 14px 16px;
+      font-size: 13px;
+    }
+
+    .landscape-row {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr 1.1fr;
+      font-size: 12px;
+      padding: 6px 0;
+      border-bottom: 1px dashed #e5e7eb;
+      gap: 8px;
+    }
+
+    .landscape-row.head {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      border-bottom: 1px solid #e5e7eb;
+      padding-top: 0;
+    }
+
+    .landscape-row:last-child {
+      border-bottom: none;
+    }
+
+    .landscape-model {
+      font-weight: 600;
+    }
+
+    .landscape-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #f3f4ff;
+      color: #4b5563;
+    }
+
+    .landscape-bar {
+      flex: 1;
+      height: 4px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .landscape-bar span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      border-radius: 999px;
+      background: #2563eb;
+    }
+
+    .landscape-footnote {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* EXPLAINER / CTA */
+    .explain-section {
+      margin-top: 28px;
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      padding: 16px 16px 18px;
+      font-size: 13px;
+      display: grid;
+      grid-template-columns: 1.6fr 1.2fr;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .explain-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .explain-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .explain-list {
+      list-style: none;
+      font-size: 12px;
+      color: var(--text-muted);
+      display: grid;
+      gap: 4px;
+    }
+
+    .explain-links {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: grid;
+      gap: 6px;
+    }
+
+    .explain-links a {
+      color: var(--accent);
+    }
+
+    .explain-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 30px;
+      padding-top: 14px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    footer a {
+      color: var(--accent);
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1000px) {
+      .trend-highlight-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .landscape-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .explain-section {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+      .nav-inner { flex-wrap: wrap; }
+      .page { padding-inline: 12px; }
+    }
+
+    @media (max-width: 600px) {
+      .landscape-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="nav-left">
+      <div class="logo-icon notranslate" translate="no">AI</div>
+      <div>
+        <div class="logo-text-main notranslate" translate="no">AI Tools Directory</div>
+        <div class="logo-text-sub">Discover & Compare AI Tools</div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tools.html">Tools</a></li>
+          <li><a href="comparison.html">Compare</a></li>
+          <li><a href="trends.html" class="active">Trends</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#footer">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <!-- HERO -->
+  <section class="trends-hero">
+    <div class="trends-kicker">Trends & landscape</div>
+    <h1 class="trends-title">How AI tools are being used in practice.</h1>
+    <p class="trends-subtitle">
+      A high-level view of where general-purpose models, specialised tools and everyday workflows
+      are heading. This page focuses on usage patterns rather than hype.
+    </p>
+
+    <div class="trends-label-row">
+      <div class="trends-chip">💬 General-purpose chat models</div>
+      <div class="trends-chip">💻 Coding assistants</div>
+      <div class="trends-chip">🖼️ Image generators</div>
+      <div class="trends-chip">⚙️ Productivity & workflows</div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="trend-highlight-grid">
+    <!-- Left: main trend -->
+    <article class="trend-card">
+      <div class="trend-card-header">
+        <h2 class="trend-card-title">General-purpose models stay at the center</h2>
+        <span class="trend-card-label">Usage trend</span>
+      </div>
+      <p class="trend-card-text">
+        Most people start with a general AI assistant and then add specialised tools on top.
+        For many everyday tasks, a single model is enough – but for deep work, people often
+        combine multiple tools.
+      </p>
+      <ul class="trend-list">
+        <li>
+          <span class="model notranslate" translate="no">ChatGPT</span> is often used as the
+          “first place to ask” for explanations, drafts and quick ideas.
+        </li>
+        <li>
+          <span class="model notranslate" translate="no">Claude</span> is frequently chosen for
+          long documents, reports and careful summaries.
+        </li>
+        <li>
+          <span class="model notranslate" translate="no">Gemini</span> fits well when people
+          already work heavily inside Google products.
+        </li>
+      </ul>
+      <div class="trend-mini-note">
+        In practice, many users switch between two or more models during the same project.
+      </div>
+    </article>
+
+    <!-- Right: side trends -->
+    <article class="trend-card">
+      <div class="trend-card-header">
+        <h2 class="trend-card-title">Specialised tools grow around them</h2>
+        <span class="trend-card-label">Ecosystem</span>
+      </div>
+      <p class="trend-card-text">
+        Instead of one model doing everything perfectly, people rely on a small stack of tools,
+        each good at something specific.
+      </p>
+      <ul class="trend-list">
+        <li>
+          Coding with <span class="model notranslate" translate="no">Copilot</span> in the editor,
+          while using another model for explanations and documentation.
+        </li>
+        <li>
+          Visual work with <span class="model notranslate" translate="no">DALL·E</span> or
+          <span class="model notranslate" translate="no">Midjourney</span>, then layout in
+          design tools.
+        </li>
+        <li>
+          Notes and tasks inside tools like Notion or office suites with built-in AI.
+        </li>
+      </ul>
+      <div class="trend-mini-note">
+        This directory is designed around that reality: one core assistant, several supporting tools.
+      </div>
+    </article>
+  </section>
+
+  <!-- LANDSCAPE SNAPSHOT -->
+  <section class="landscape-section">
+    <div class="section-header-row">
+      <h2 class="section-title">Model landscape snapshot</h2>
+      <div class="section-note">Informal overview – focused on practical usage, not lab scores.</div>
+    </div>
+
+    <div class="landscape-grid">
+      <!-- Model table -->
+      <div class="landscape-card">
+        <div class="landscape-row head">
+          <div>Model</div>
+          <div>Main focus</div>
+          <div>Often chosen for</div>
+        </div>
+
+        <div class="landscape-row">
+          <div class="landscape-model notranslate" translate="no">ChatGPT</div>
+          <div>General-purpose assistant</div>
+          <div>Everyday questions, writing, reasoning</div>
+        </div>
+
+        <div class="landscape-row">
+          <div class="landscape-model notranslate" translate="no">Claude</div>
+          <div>Long context & careful reading</div>
+          <div>Reports, research, long PDFs</div>
+        </div>
+
+        <div class="landscape-row">
+          <div class="landscape-model notranslate" translate="no">Gemini</div>
+          <div>Search & Google ecosystem</div>
+          <div>Fast answers, Google Workspace</div>
+        </div>
+
+        <div class="landscape-row">
+          <div class="landscape-model notranslate" translate="no">Copilot</div>
+          <div>Coding inside editors</div>
+          <div>Inline code suggestions, refactors</div>
+        </div>
+
+        <div class="landscape-row">
+          <div class="landscape-model notranslate" translate="no">DALL·E / Midjourney</div>
+          <div>Image generation</div>
+          <div>Visual ideas, concept art, assets</div>
+        </div>
+      </div>
+
+      <!-- Simple "popularity / usage" chips -->
+      <div class="landscape-card">
+        <p class="trend-card-text" style="margin-bottom:10px;">
+          The chips below are a qualitative view – not exact numbers. They show how commonly
+          each type of tool appears in everyday workflows.
+        </p>
+
+        <div style="display:grid; gap:8px; font-size:12px; margin-top:4px;">
+          <div class="landscape-chip">
+            <span>AI chat assistants</span>
+            <div class="landscape-bar">
+              <span style="width:90%;"></span>
+            </div>
+          </div>
+          <div class="landscape-chip">
+            <span>Coding assistants</span>
+            <div class="landscape-bar">
+              <span style="width:80%;"></span>
+            </div>
+          </div>
+          <div class="landscape-chip">
+            <span>Image generators</span>
+            <div class="landscape-bar">
+              <span style="width:70%;"></span>
+            </div>
+          </div>
+          <div class="landscape-chip">
+            <span>Video & audio tools</span>
+            <div class="landscape-bar">
+              <span style="width:55%;"></span>
+            </div>
+          </div>
+          <div class="landscape-chip">
+            <span>Productivity integrations</span>
+            <div class="landscape-bar">
+              <span style="width:65%;"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="landscape-footnote">
+          These estimates are meant to give a feeling for where the activity is, not to be read
+          as strict statistics.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPLAINER / HOW TO USE THIS PAGE -->
+  <section class="explain-section">
+    <div>
+      <h2 class="explain-title">How to use this trends page</h2>
+      <p class="explain-text">
+        This page is designed to give you context before you dive into details. Instead of tracking
+        every small change, it highlights stable patterns in how people use AI tools today.
+      </p>
+      <ul class="explain-list">
+        <li>• Start with a general-purpose model that fits your daily work.</li>
+        <li>• Add one coding assistant if you write code regularly.</li>
+        <li>• Use image / video tools only when you have clear visual tasks.</li>
+        <li>• Keep your stack small – 3–5 tools are usually enough.</li>
+      </ul>
+    </div>
+
+    <div class="explain-links">
+      <div>Next steps from here:</div>
+      <a href="comparison.html">→ Compare core models side by side</a>
+      <a href="tools.html">→ Browse tools by category</a>
+      <a href="blog.html">→ Read guides on prompts and workflows</a>
+      <div style="font-size:11px; color:var(--text-muted); margin-top:4px;">
+        Over time you can update this page if major models change or new categories appear.
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <span>© 2025 AI Tools Directory. All rights reserved.</span>
+    <span><a href="comparison.html">Compare AI models</a></span>
+  </footer>
+</main>
+
+</body>
+</html>

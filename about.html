@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Tools Directory – About & Contact</title>
+
+  <meta name="description" content="Learn what AI Tools Directory is about and how to get in touch. A neutral, curated overview of AI tools for everyday use.">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-page: #f5f5f7;
+      --bg-card: #ffffff;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --border-subtle: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: #eff4ff;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --shadow-soft: 0 14px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg-page);
+      color: var(--text-main);
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .notranslate { }
+
+    /* HEADER / NAV */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #2563eb, #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .logo-text-main {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .logo-text-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+      margin-left: 28px;
+    }
+
+    nav a {
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      color: var(--text-muted);
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--text-main);
+      border-color: var(--accent);
+    }
+
+    /* PAGE WRAPPER */
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    /* HERO */
+    .about-hero {
+      margin-bottom: 24px;
+    }
+
+    .about-kicker {
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .about-title {
+      font-size: clamp(26px, 4vw, 34px);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .about-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 680px;
+      line-height: 1.6;
+    }
+
+    /* ABOUT GRID */
+    .about-grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
+      gap: 16px;
+    }
+
+    .about-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      padding: 16px 16px 18px;
+      font-size: 13px;
+    }
+
+    .about-card-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .about-card-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .about-list {
+      list-style: none;
+      font-size: 12px;
+      color: var(--text-muted);
+      display: grid;
+      gap: 4px;
+      margin-top: 4px;
+    }
+
+    .badge-soft {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: #f9fafb;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* CONTACT SECTION */
+    .contact-section {
+      margin-top: 28px;
+    }
+
+    .contact-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      padding: 16px 16px 18px;
+      font-size: 13px;
+    }
+
+    .contact-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .contact-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .contact-item {
+      font-size: 13px;
+      margin-top: 6px;
+      color: var(--text-main);
+    }
+
+    .contact-label {
+      font-weight: 500;
+    }
+
+    .contact-item a {
+      color: var(--accent);
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-small {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 30px;
+      padding-top: 14px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    footer a {
+      color: var(--accent);
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1000px) {
+      .about-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+      .nav-inner { flex-wrap: wrap; }
+      .page { padding-inline: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="nav-left">
+      <div class="logo-icon notranslate" translate="no">AI</div>
+      <div>
+        <div class="logo-text-main notranslate" translate="no">AI Tools Directory</div>
+        <div class="logo-text-sub">Discover & Compare AI Tools</div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tools.html">Tools</a></li>
+          <li><a href="comparison.html">Compare</a></li>
+          <li><a href="trends.html">Trends</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <!-- HERO -->
+  <section class="about-hero">
+    <div class="about-kicker">About & contact</div>
+    <h1 class="about-title">What AI Tools Directory is and how to reach us.</h1>
+    <p class="about-subtitle">
+      This site is a neutral, curated overview of AI tools. The goal is to make it easier
+      to understand what each tool is good at, without marketing noise or spam listings.
+    </p>
+  </section>
+
+  <!-- ABOUT GRID -->
+  <section class="about-grid">
+    <article class="about-card">
+      <h2 class="about-card-title">What this site focuses on</h2>
+      <p class="about-card-text">
+        AI evolves fast, but some needs stay the same: clear comparisons, simple explanations
+        and realistic expectations. This directory is organised around how people actually use
+        AI in daily work.
+      </p>
+      <ul class="about-list">
+        <li>• Highlighting a small set of widely used AI tools.</li>
+        <li>• Showing where each model is strong, not only scores.</li>
+        <li>• Grouping tools by real workflows (chat, coding, visuals, etc.).</li>
+        <li>• Keeping language simple and practical.</li>
+      </ul>
+      <div class="badge-soft">
+        ✅ No pay-to-rank, no spam listings – curated by hand.
+      </div>
+    </article>
+
+    <article class="about-card">
+      <h2 class="about-card-title">Who this site is for</h2>
+      <p class="about-card-text">
+        The content is written for people who want to use AI tools to get work done – not just
+        read about them. That includes both beginners and experienced users.
+      </p>
+      <ul class="about-list">
+        <li>• Students and professionals exploring AI assistants.</li>
+        <li>• Developers looking at coding tools and workflows.</li>
+        <li>• Creators using AI for images, video and content.</li>
+        <li>• Anyone who wants a simple overview before testing tools.</li>
+      </ul>
+      <div class="badge-soft">
+        📚 You can move from overview → comparison → blog guides in a few clicks.
+      </div>
+    </article>
+  </section>
+
+  <!-- CONTACT (no form, sadece mail) -->
+  <section class="contact-section" id="contact">
+    <article class="contact-card">
+      <h2 class="contact-title">Contact & feedback</h2>
+      <p class="contact-text">
+        Questions, suggestions or corrections about the tools listed here are welcome. If you
+        notice outdated information or want to propose a new tool to include, feel free to reach out.
+      </p>
+
+      <div class="contact-item">
+        <span class="contact-label">Email:</span>
+        <a href="mailto:contact@aitoolsdirectory.com">contact@aitoolsdirectory.com</a>
+        <!-- İstersen burayı kendi email adresinle değiştir -->
+      </div>
+
+      <div class="contact-item">
+        <span class="contact-label">Topic examples:</span>
+        updates to tool descriptions, comparison feedback, ideas for new blog articles.
+      </div>
+
+      <div class="contact-small">
+        Please avoid sending any sensitive personal data. Keep messages focused on tools,
+        content or general questions.
+      </div>
+    </article>
+  </section>
+
+  <footer id="footer">
+    <span>© 2025 AI Tools Directory. All rights reserved.</span>
+    <span>
+      <a href="comparison.html">Compare AI models</a>
+    </span>
+  </footer>
+</main>
+
+</body>
+</html>
