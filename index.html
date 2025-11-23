@@ -431,13 +431,25 @@
     }
 
     @media (max-width: 768px) {
-      nav ul { display: none; }
-      .nav-inner { flex-wrap: wrap; }
-      .page { padding-inline: 12px; }
-      .tool-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
+  nav ul {
+    margin-left: 0;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 13px;
+  }
+
+  .nav-inner {
+    flex-wrap: wrap;
+  }
+
+  .page {
+    padding-inline: 12px;
+  }
+
+  .tool-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
   </style>
 </head>
 <body>

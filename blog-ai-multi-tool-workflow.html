@@ -224,10 +224,23 @@
     }
 
     @media (max-width: 768px) {
-      nav ul { display: none; }
-      .nav-inner { flex-wrap: wrap; }
-      .page, footer { padding-inline: 12px; }
-    }
+  nav ul {
+    margin-left: 0;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 13px;
+  }
+
+  .nav-inner {
+    flex-wrap: wrap;
+  }
+
+  .page,
+  footer {
+    padding-inline: 12px;
+  }
+}
+
   </style>
 </head>
 <body>
