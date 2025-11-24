@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Anasayfa -->
+  <url>
+    <loc>https://modelpanelai.com/</loc>
+  </url>
+
+  <!-- Ana sayfalar -->
+  <url>
+    <loc>https://modelpanelai.com/tools.html</loc>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/compare.html</loc>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/trends.html</loc>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/about.html</loc>
+  </url>
+
+  <!-- Blog ana sayfası -->
+  <url>
+    <loc>https://modelpanelai.com/blog.html</loc>
+  </url>
+
+  <!-- Blog yazıları -->
+  <url>
+    <loc>https://modelpanelai.com/blog-ai-benchmarks-explained.html</loc>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/blog-ai-chat-compare.html</loc>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/blog-ai-coding-assistants.html</loc>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/blog-ai-images-dalle-midjourney.html</loc>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/blog-ai-multi-tool-workflow.html</loc>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/blog-ai-prompts-10-examples.html</loc>
+  </url>
+
+</urlset>
