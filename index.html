@@ -4,484 +4,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ModelPanel AI – Find the Right AI Tool</title>
+
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6D3SDGTKHZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6D3SDGTKHZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6D3SDGTKHZ');
+  </script>
 
-  gtag('config', 'G-6D3SDGTKHZ');
-</script>
-<!-- Tarayıcı faviconları -->
-<link rel="icon" type="image/png" sizes="32x32" href="/modelpanelai-favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/modelpanelai-favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/modelpanelai-apple-touch-icon-180x180.png">
+  <!-- Tarayıcı faviconları -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/modelpanelai-favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/modelpanelai-favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/modelpanelai-apple-touch-icon-180x180.png">
 
-<!-- Tema rengi (mobil tarayıcı üst bar rengi) -->
-<meta name="theme-color" content="#050816">
+  <!-- Tema rengi (mobil tarayıcı üst bar rengi) -->
+  <meta name="theme-color" content="#050816">
 
-<!-- Open Graph (Google / WhatsApp / LinkedIn önizleme) -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="ModelPanel AI – Find the Right AI Tool">
-<meta property="og:description" content="Search and compare AI tools for chat, coding, images, video and productivity.">
-<meta property="og:url" content="https://modelpanelai.com/">
-<meta property="og:image" content="https://modelpanelai.com/images/modelpanelai-og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+  <!-- Open Graph (Google / WhatsApp / LinkedIn önizleme) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ModelPanel AI – Find the Right AI Tool">
+  <meta property="og:description" content="Search and compare AI tools for chat, coding, images, video and productivity.">
+  <meta property="og:url" content="https://modelpanelai.com/">
+  <meta property="og:image" content="https://modelpanelai.com/images/modelpanelai-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
-<!-- X / Twitter önizleme -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ModelPanel AI – Find the Right AI Tool">
-<meta name="twitter:description" content="Search and compare AI tools for chat, coding, images, video and productivity.">
-<meta name="twitter:image" content="https://modelpanelai.com/images/modelpanelai-og.png">
+  <!-- X / Twitter önizleme -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ModelPanel AI – Find the Right AI Tool">
+  <meta name="twitter:description" content="Search and compare AI tools for chat, coding, images, video and productivity.">
+  <meta name="twitter:image" content="https://modelpanelai.com/images/modelpanelai-og.png">
 
   <meta name="description" content="Discover and compare AI tools for chat, coding, images, video and productivity. Find the right AI tool for your workflow.">
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg-page: #f5f5f7;
-      --bg-card: #ffffff;
-      --text-main: #111827;
-      --text-muted: #6b7280;
-      --border-subtle: #e5e7eb;
-      --accent: #2563eb;
-      --accent-soft: #eff4ff;
-      --radius-lg: 18px;
-      --radius-md: 14px;
-      --shadow-soft: 0 14px 30px rgba(15, 23, 42, 0.06);
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg-page);
-      color: var(--text-main);
-    }
-
-    a { text-decoration: none; color: inherit; }
-
-    .notranslate {
-      /* Google Translate için işaret, görsel değişiklik yok */
-    }
-
-    /* HEADER / NAV */
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
-      position: sticky;
-      top: 0;
-      z-index: 50;
-    }
-
-    .nav-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 10px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .logo-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #2563eb, #1d4ed8);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      font-weight: 600;
-      font-size: 16px;
-    }
-
-    .logo-text-main {
-      font-size: 18px;
-      font-weight: 600;
-    }
-
-    .logo-text-sub {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 18px;
-      font-size: 14px;
-      margin-left: 28px;
-    }
-
-    nav a {
-      padding-bottom: 2px;
-      border-bottom: 2px solid transparent;
-      color: var(--text-muted);
-      transition: color 0.15s ease, border-color 0.15s ease;
-    }
-
-    nav a:hover,
-    nav a.active {
-      color: var(--text-main);
-      border-color: var(--accent);
-    }
-
-    /* PAGE WRAPPER */
-    .page {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 24px 16px 40px;
-    }
-
-    /* HERO HOME */
-    .hero-home {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 28px;
-      margin-bottom: 32px;
-      align-items: center;
-    }
-
-    .hero-title {
-      font-size: clamp(28px, 4.4vw, 40px);
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .hero-subtitle {
-      font-size: 14px;
-      color: var(--text-muted);
-      max-width: 540px;
-      line-height: 1.6;
-      margin-bottom: 4px;
-    }
-
-    /* HERO SIDE CARD */
-    .hero-side-card {
-      background: #111827;
-      color: #f9fafb;
-      border-radius: var(--radius-lg);
-      padding: 16px 16px 18px;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.4);
-      font-size: 13px;
-    }
-
-    .hero-side-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      opacity: 0.7;
-      margin-bottom: 4px;
-    }
-
-    .hero-side-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .hero-side-list {
-      list-style: none;
-      display: grid;
-      gap: 6px;
-      margin-top: 4px;
-    }
-
-    .hero-side-list li {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 8px;
-      font-size: 12px;
-    }
-
-    .hero-side-list span.name {
-      opacity: 0.9;
-    }
-
-    .hero-side-list span.badge {
-      font-size: 11px;
-      padding: 2px 7px;
-      border-radius: 999px;
-      background: rgba(248, 250, 252, 0.1);
-    }
-
-    /* HOME SECTIONS */
-    .home-section {
-      margin-top: 26px;
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 12px;
-      margin-bottom: 14px;
-    }
-
-    .section-title {
-      font-size: 18px;
-      font-weight: 600;
-    }
-
-    .section-sub {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    /* TOOL GRID */
-    .tool-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .tool-card {
-      background: var(--bg-card);
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border-subtle);
-      padding: 12px 12px 13px;
-      box-shadow: var(--shadow-soft);
-      font-size: 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      transition: transform 0.12s ease, box-shadow 0.12s ease;
-    }
-
-    .tool-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
-    }
-
-    .tool-header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .tool-icon {
-      width: 26px;
-      height: 26px;
-      border-radius: 8px;
-      background: #eff4ff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-    }
-
-    .tool-name-row {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .tool-name {
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .tool-badge {
-      font-size: 10px;
-      padding: 2px 6px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-    }
-
-    .tool-desc {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .tool-meta-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
-
-    .tool-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px;
-      margin-top: 2px;
-    }
-
-    .tool-tag {
-      font-size: 10px;
-      padding: 2px 6px;
-      border-radius: 999px;
-      background: #f3f4ff;
-      color: #4b5563;
-    }
-
-    /* Link stili: "→ View in comparison" */
-    .tool-meta-row a.tool-link {
-      color: var(--accent);
-      text-decoration: none;
-      font-size: 11px;
-    }
-
-    .tool-meta-row a.tool-link:hover {
-      text-decoration: underline;
-    }
-
-    /* CATEGORY CHIPS / CARDS */
-    .category-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .category-chip {
-      font-size: 11px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: #ffffff;
-      border: 1px solid var(--border-subtle);
-      box-shadow: var(--shadow-soft);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .category-chip span.emoji {
-      font-size: 14px;
-    }
-
-    .category-chip a.category-ai-link {
-      color: var(--accent);
-      text-decoration: none;
-      font-size: 11px;
-    }
-
-    .category-chip a.category-ai-link:hover {
-      text-decoration: underline;
-    }
-
-    /* COMPARISON PREVIEW */
-    .comparison-preview {
-      background: #ffffff;
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-subtle);
-      box-shadow: var(--shadow-soft);
-      padding: 16px 16px 18px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 18px;
-      align-items: center;
-      font-size: 13px;
-    }
-
-    .comparison-list {
-      list-style: none;
-      display: grid;
-      gap: 6px;
-      margin-top: 6px;
-      font-size: 12px;
-    }
-
-    .comparison-list li {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--text-muted);
-    }
-
-    .comparison-cta {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      align-items: flex-start;
-    }
-
-    .comparison-cta button {
-      border: none;
-      border-radius: 999px;
-      padding: 8px 16px;
-      font-size: 13px;
-      font-weight: 500;
-      cursor: pointer;
-      background: var(--accent);
-      color: #f9fafb;
-    }
-
-    .comparison-cta span {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    /* FOOTER */
-    footer {
-      margin-top: 30px;
-      padding-top: 14px;
-      border-top: 1px solid #e5e7eb;
-      font-size: 12px;
-      color: var(--text-muted);
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    footer a {
-      color: var(--accent);
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 1000px) {
-      .hero-home {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .tool-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .comparison-preview {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-  nav ul {
-    margin-left: 0;
-    gap: 12px;
-    flex-wrap: wrap;
-    font-size: 13px;
-  }
-
-  .nav-inner {
-    flex-wrap: wrap;
-  }
-
-  .page {
-    padding-inline: 12px;
-  }
-
-  .tool-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-  </style>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -499,9 +61,7 @@
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="tools.html">Tools</a></li>
           <li><a href="compare.html">Compare</a></li>
-          <li><a href="trends.html">Trends</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="about.html">About</a></li>
         </ul>
       </nav>
     </div>
@@ -745,6 +305,47 @@
     </div>
   </section>
 
+  <!-- COMPARISON PREVIEW (önceki id="trends" idi, sadeleştirdik) -->
+  <section class="home-section" id="comparison-preview">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Latest comparisons</h2>
+        <p class="section-sub">See how leading AI tools stack up against each other.</p>
+      </div>
+    </div>
+
+    <div class="comparison-preview">
+      <div>
+        <h3 style="font-size:15px; margin-bottom:4px;">
+          <span class="notranslate" translate="no">ChatGPT</span>
+          vs
+          <span class="notranslate" translate="no">Claude</span>
+          vs
+          <span class="notranslate" translate="no">Gemini</span>
+          vs
+          <span class="notranslate" translate="no">Copilot</span>
+        </h3>
+        <p style="font-size:13px; color:var(--text-muted);">
+          We compare four popular models across accuracy, reasoning, creativity, coding
+          and pricing.
+        </p>
+        <ul class="comparison-list">
+          <li>• Overall strengths and weaknesses</li>
+          <li>• Informal performance scores by category</li>
+          <li>• Feature matrix (web, images, code, multimodal)</li>
+          <li>• Recommended use cases for each model</li>
+        </ul>
+      </div>
+
+      <div class="comparison-cta">
+        <a href="compare.html">
+          <button type="button">Open full comparison</button>
+        </a>
+        <span>View detailed tables and a radar chart with relative scores.</span>
+      </div>
+    </div>
+  </section>
+
   <!-- CATEGORIES -->
   <section class="home-section" id="categories">
     <div class="section-header">
@@ -830,54 +431,15 @@
     </div>
   </section>
 
-  <!-- TRENDS / COMPARISON PREVIEW -->
-  <section class="home-section" id="trends">
-    <div class="section-header">
-      <div>
-        <h2 class="section-title">Latest comparisons</h2>
-        <p class="section-sub">See how leading AI tools stack up against each other.</p>
-      </div>
-    </div>
-
-    <div class="comparison-preview">
-      <div>
-        <h3 style="font-size:15px; margin-bottom:4px;">
-          <span class="notranslate" translate="no">ChatGPT</span>
-          vs
-          <span class="notranslate" translate="no">Claude</span>
-          vs
-          <span class="notranslate" translate="no">Gemini</span>
-          vs
-          <span class="notranslate" translate="no">Copilot</span>
-        </h3>
-        <p style="font-size:13px; color:var(--text-muted);">
-          We compare four popular models across accuracy, reasoning, creativity, coding
-          and pricing.
-        </p>
-        <ul class="comparison-list">
-          <li>• Overall strengths and weaknesses</li>
-          <li>• Informal performance scores by category</li>
-          <li>• Feature matrix (web, images, code, multimodal)</li>
-          <li>• Recommended use cases for each model</li>
-        </ul>
-      </div>
-
-      <div class="comparison-cta">
-        <a href="compare.html">
-          <button type="button">Open full comparison</button>
-        </a>
-        <span>View detailed tables and a radar chart with relative scores.</span>
-      </div>
-    </div>
-  </section>
-
   <footer id="footer">
     <span>© 2025 ModelPanel AI. All rights reserved.</span>
-    <span><a href="compare.html">Compare AI models</a></span>
+    <span>
+      <a href="compare.html">Compare AI models</a>
+      ·
+      <a href="about.html">About &amp; Contact</a>
+    </span>
   </footer>
 </main>
 
 </body>
 </html>
-
-
