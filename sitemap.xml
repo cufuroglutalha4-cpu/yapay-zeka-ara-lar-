@@ -4,53 +4,60 @@
   <!-- Anasayfa -->
   <url>
     <loc>https://modelpanelai.com/</loc>
+    <lastmod>2025-12-08</lastmod>
   </url>
 
   <!-- Ana sayfalar -->
   <url>
     <loc>https://modelpanelai.com/tools.html</loc>
+    <lastmod>2025-12-08</lastmod>
   </url>
 
   <url>
     <loc>https://modelpanelai.com/compare.html</loc>
-  </url>
-
-  <url>
-    <loc>https://modelpanelai.com/trends.html</loc>
+    <lastmod>2025-12-08</lastmod>
   </url>
 
   <url>
     <loc>https://modelpanelai.com/about.html</loc>
+    <lastmod>2025-12-08</lastmod>
   </url>
 
   <!-- Blog ana sayfası -->
   <url>
     <loc>https://modelpanelai.com/blog.html</loc>
+    <lastmod>2025-12-08</lastmod>
   </url>
 
   <!-- Blog yazıları -->
   <url>
     <loc>https://modelpanelai.com/blog-ai-benchmarks-explained.html</loc>
+    <lastmod>2025-12-08</lastmod>
   </url>
 
   <url>
     <loc>https://modelpanelai.com/blog-ai-chat-compare.html</loc>
+    <lastmod>2025-12-08</lastmod>
   </url>
 
   <url>
     <loc>https://modelpanelai.com/blog-ai-coding-assistants.html</loc>
+    <lastmod>2025-12-08</lastmod>
   </url>
 
   <url>
     <loc>https://modelpanelai.com/blog-ai-images-dalle-midjourney.html</loc>
+    <lastmod>2025-12-08</lastmod>
   </url>
 
   <url>
     <loc>https://modelpanelai.com/blog-ai-multi-tool-workflow.html</loc>
+    <lastmod>2025-12-08</lastmod>
   </url>
 
   <url>
     <loc>https://modelpanelai.com/blog-ai-prompts-10-examples.html</loc>
+    <lastmod>2025-12-08</lastmod>
   </url>
 
 </urlset>
