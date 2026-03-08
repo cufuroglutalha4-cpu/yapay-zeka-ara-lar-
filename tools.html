@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Best AI Tools Library | Chat, Coding, Image, Video & Productivity | ModelPanel AI</title>
+
+  <!-- Tarayıcı faviconları -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/modelpanelai-favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/modelpanelai-favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/modelpanelai-apple-touch-icon-180x180.png">
+  <meta name="theme-color" content="#050816">
+
+  <!-- SEO -->
+  <meta
+    name="description"
+    content="Explore the best AI tools by category including chat assistants, coding tools, image generators, video tools, productivity apps and marketing software. Compare options and discover the right AI tool for your workflow."
+  />
+  <link rel="canonical" href="https://modelpanelai.com/tools.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Best AI Tools Library | ModelPanel AI" />
+  <meta
+    property="og:description"
+    content="Browse curated AI tools across chat, coding, image, video, productivity and marketing."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://modelpanelai.com/tools.html" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6D3SDGTKHZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6D3SDGTKHZ');
+  </script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-page: #f5f5f7;
+      --bg-card: #ffffff;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --border-subtle: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: #eff4ff;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --shadow-soft: 0 14px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg-page);
+      color: var(--text-main);
+    }
+
+    a { text-decoration: none; color: inherit; }
+    .notranslate {}
+
+    /* HEADER / NAV */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #2563eb, #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .logo-text-main {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .logo-text-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+      margin-left: 28px;
+    }
+
+    nav a {
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      color: var(--text-muted);
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--text-main);
+      border-color: var(--accent);
+    }
+
+    /* PAGE WRAPPER */
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    /* HERO */
+    .tools-hero {
+      margin-bottom: 22px;
+    }
+
+    .tools-kicker {
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .tools-title {
+      font-size: clamp(26px, 4vw, 34px);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .tools-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 760px;
+      line-height: 1.6;
+    }
+
+    .quick-links {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .quick-link {
+      font-size: 12px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid #dbe7ff;
+      font-weight: 500;
+    }
+
+    .quick-link:hover {
+      background: #e7f0ff;
+    }
+
+    /* CATEGORY NAV */
+    .category-nav {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .category-pill {
+      font-size: 11px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: #ffffff;
+      color: var(--text-muted);
+      box-shadow: var(--shadow-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .category-pill span.emoji {
+      font-size: 14px;
+    }
+
+    .category-pill:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* SECTION TITLES */
+    .tools-section {
+      margin-top: 32px;
+      scroll-margin-top: 90px;
+    }
+
+    .tools-section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .tools-section-title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .tools-section-note {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* TOOL GRID */
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .tool-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      padding: 12px 12px 13px;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+    }
+
+    .tool-name-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .tool-name {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .tool-type {
+      font-size: 11px;
+      color: var(--text-muted);
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: #f3f4ff;
+    }
+
+    .tool-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .tool-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 2px;
+    }
+
+    .tool-tag {
+      font-size: 10px;
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: #f9fafb;
+      color: #4b5563;
+      border: 1px solid #e5e7eb;
+    }
+
+    .tool-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 6px;
+      font-size: 11px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tool-links a {
+      color: var(--accent);
+    }
+
+    .tool-links a:hover {
+      text-decoration: underline;
+    }
+
+    .tool-links span {
+      color: var(--text-muted);
+    }
+
+    .more-row {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 12px;
+    }
+
+    .more-row a {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .more-row a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 36px;
+      padding-top: 14px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    footer a {
+      color: var(--accent);
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1000px) {
+      .tool-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        margin-left: 0;
+        gap: 12px;
+        flex-wrap: wrap;
+        font-size: 13px;
+      }
+
+      .nav-inner {
+        flex-wrap: wrap;
+      }
+
+      .page {
+        padding-inline: 12px;
+      }
+
+      .tool-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .tools-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="nav-left">
+      <div class="logo-icon notranslate" translate="no">AI</div>
+      <div>
+        <div class="logo-text-main notranslate" translate="no">ModelPanel AI</div>
+        <div class="logo-text-sub">AI tools & model comparison</div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tools.html" class="active">Tools</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <!-- HERO -->
+  <section class="tools-hero">
+    <div class="tools-kicker">Tools library</div>
+    <h1 class="tools-title">Explore the best AI tools by category.</h1>
+    <p class="tools-subtitle">
+      Browse curated AI tools across chat, coding, image generation, video, productivity and marketing.
+      Use this page as your starting point, then jump into individual reviews, comparisons and category guides
+      to find the right AI tool for your workflow.
+    </p>
+
+    <!-- SEO destek linkleri -->
+    <div class="quick-links">
+      <a href="best-ai-tools.html" class="quick-link">Best AI tools</a>
+      <a href="best-ai-chat-tools.html" class="quick-link">Best AI chat tools</a>
+      <a href="best-ai-coding-tools.html" class="quick-link">Best AI coding tools</a>
+      <a href="best-ai-image-generators.html" class="quick-link">Best AI image generators</a>
+      <a href="chatgpt-alternatives.html" class="quick-link">ChatGPT alternatives</a>
+      <a href="compare.html" class="quick-link">Compare AI models</a>
+    </div>
+
+    <!-- CATEGORY PILLS -->
+    <div class="category-nav">
+      <a href="#chat-tools" class="category-pill">
+        <span class="emoji">💬</span><span>AI chat</span>
+      </a>
+      <a href="#coding-tools" class="category-pill">
+        <span class="emoji">💻</span><span>Coding</span>
+      </a>
+      <a href="#image-tools" class="category-pill">
+        <span class="emoji">🖼️</span><span>Image & design</span>
+      </a>
+      <a href="#video-tools" class="category-pill">
+        <span class="emoji">🎬</span><span>Video & audio</span>
+      </a>
+      <a href="#productivity-tools" class="category-pill">
+        <span class="emoji">⚙️</span><span>Productivity</span>
+      </a>
+      <a href="#marketing-tools" class="category-pill">
+        <span class="emoji">📈</span><span>SEO & marketing</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- CHAT TOOLS -->
+  <section id="chat-tools" class="tools-section">
+    <div class="tools-section-header">
+      <h2 class="tools-section-title">AI chat assistants</h2>
+      <div class="tools-section-note">General-purpose conversation, research help, writing and reasoning.</div>
+    </div>
+
+    <div class="tool-grid">
+      <article class="tool-card">
+        <div class="tool-name-row">
+          <div class="tool-name notranslate" translate="no">ChatGPT</div>
+          <div class="tool-type">AI chat</div>
+        </div>
+        <p class="tool-desc">
+          General-purpose assistant for writing, brainstorming, summarising and step-by-step problem solving.
+        </p>
+        <div class="tool-tags">
+          <span class="tool-tag">Everyday questions</span>
+          <span class="tool-tag">Writing & editing</span>
+          <span class="tool-tag">Reasoning</span>
+        </div>
+        <div class="tool-links">
+          <a href="chatgpt-review.html">Read review →</a>
+          <a href="chatgpt-vs-claude.html">Compare →</a>
+          <a href="https://chatgpt.com" target="_blank" rel="noopener">Official site →</a>
+        </div>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-name-row">
+          <div class="tool-name notranslate" translate="no">Claude</div>
+          <div class="tool-type">AI chat</div>
+        </div>
+        <p class="tool-desc">
+          Strong for long documents, structured analysis, careful writing and detailed summaries.
+        </p>
+        <div class="tool-tags">
+          <span class="tool-tag">Long PDFs</span>
+          <span class="tool-tag">Reports</span>
+          <span class="tool-tag">Careful reading</span>
+        </div>
+        <div class="tool-links">
+          <a href="claude-review.html">Read review →</a>
+          <a href="chatgpt-vs-claude.html">Compare →</a>
+          <a href="https://claude.ai" target="_blank" rel="noopener">Official site →</a>
+        </div>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-name-row">
+          <div class="tool-name notranslate" translate="no">Gemini</div>
+          <div class="tool-type">AI chat</div>
+        </div>
+        <p class="tool-desc">
+          Fast answers with strong Google ecosystem integration for search, workspace and productivity.
+        </p>
+        <div class="tool-tags">
+          <span class="tool-tag">Search</span>
+          <span class="tool-tag">Google services</span>
+          <span class="tool-tag">Fast answers</span>
+        </div>
+        <div class="tool-links">
+          <a href="gemini-review.html">Read review →</a>
+          <a href="chatgpt-vs-gemini.html">Compare →</a>
+          <a href="https://gemini.google.com" target="_blank" rel="noopener">Official site →</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="more-row">
+      <a href="best-ai-chat-tools.html">See best AI chat tools →</a>
+      <a href="chatgpt-alternatives.html">Explore ChatGPT alternatives →</a>
+      <a href="compare.html">View all chat comparisons →</a>
+    </div>
+  </section>
+
+  <!-- CODING TOOLS -->
+  <section id="coding-tools" class="tools-section">
+    <div class="tools-section-header">
+      <h2 class="tools-section-title">Coding assistants</h2>
+      <div class="tools-section-note">Code suggestions, debugging, documentation and development workflows.</div>
+    </div>
+
+    <div class="tool-grid">
+      <article class="tool-card">
+        <div class="tool-name-row">
+          <div class="tool-name notranslate" translate="no">GitHub Copilot</div>
+          <div class="tool-type">Coding</div>
+        </div>
+        <p class="tool-desc">
+          Integrated into editors and IDEs, suggesting code as you type across many languages and frameworks.
+        </p>
+        <div class="tool-tags">
+          <span class="tool-tag">Inline suggestions</span>
+          <span class="tool-tag">IDE workflow</span>
+          <span class="tool-tag">Multilanguage</span>
+        </div>
+        <div class="tool-links">
+          <a href="copilot-review.html">Read review →</a>
+          <a href="chatgpt-vs-copilot.html">Compare →</a>
+          <a href="https://github.com/features/copilot" target="_blank" rel="noopener">Official site →</a>
+        </div>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-name-row">
+          <div class="tool-name notranslate" translate="no">ChatGPT</div>
+          <div class="tool-type">Coding</div>
+        </div>
+        <p class="tool-desc">
+          Explains code, writes components, suggests refactors and helps debug errors with natural language prompts.
+        </p>
+        <div class="tool-tags">
+          <span class="tool-tag">Explain errors</span>
+          <span class="tool-tag">Refactoring</span>
+          <span class="tool-tag">Code help</span>
+        </div>
+        <div class="tool-links">
+          <a href="chatgpt-review.html">Read review →</a>
+          <a href="best-ai-coding-tools.html">Coding guide →</a>
+          <a href="https://chatgpt.com" target="_blank" rel="noopener">Official site →</a>
+        </div>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-name-row">
+          <div class="tool-name notranslate" translate="no">Claude</div>
+          <div class="tool-type">Coding</div>
+        </div>
+        <p class="tool-desc">
+          Useful for reviewing larger code blocks and giving structured explanations, summaries and documentation help.
+        </p>
+        <div class="tool-tags">
+          <span class="tool-tag">Code review</span>
+          <span class="tool-tag">Documentation</span>
+          <span class="tool-tag">Large context</span>
+        </div>
+        <div class="tool-links">
+          <a href="claude-review.html">Read review →</a>
+          <a href="claude-vs-gemini.html">Compare →</a>
+          <a href="https://claude.ai" target="_blank" rel="noopener">Official site →</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="more-row">
+      <a href="best-ai-coding-tools.html">See best AI coding tools →</a>
+      <a href="chatgpt-vs-copilot.html">ChatGPT vs Copilot →</a>
+    </div>
+  </section>
+
+  <!-- IMAGE TOOLS -->
+  <section id="image-tools" class="tools-section">
+    <div class="tools-section-header">
+      <h2 class="tools-section-title">Image & design</h2>
+      <div class="tools-section-note">Text-to-image, illustration, concept art and creative visuals.</div>
+    </div>
+
+    <div class="tool-grid">
+      <article class="tool-card">
+        <div class="tool-name-row">
+          <div class="tool-name notranslate" translate="no">DALL·E</div>
+          <div class="tool-type">Image generation</div>
+        </div>
+        <p class="tool-desc">
+          Text-to-image tool for illustrations, concept visuals and assets you can refine with prompting.
+        </p>
+        <div class="tool-tags">
+          <span class="tool-tag">Concept art</span>
+          <span class="tool-tag">Illustrations</span>
+          <span class="tool-tag">Prompt-based</span>
+        </div>
+        <div class="tool-links">
+          <a href="dalle-review.html">Read review →</a>
+          <a href="midjourney-vs-dalle.html">Compare →</a>
+          <a href="https://openai.com/dall-e" target="_blank" rel="noopener">Official site →</a>
+        </div>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-name-row">
+          <div class="tool-name notranslate" translate="no">Midjourney</div>
+          <div class="tool-type">Image generation</div>
+        </div>
+        <p class="tool-desc">
+          Known for stylised, artistic visuals with strong lighting, detail and composition.
+        </p>
+        <div class="tool-tags">
+          <span class="tool-tag">Artistic style</span>
+          <span class="tool-tag">Posters</span>
+          <span class="tool-tag">Visual quality</span>
+        </div>
+        <div class="tool-links">
+          <a href="midjourney-review.html">Read review →</a>
+          <a href="midjourney-vs-dalle.html">Compare →</a>
+          <a href="https://www.midjourney.com" target="_blank" rel="noopener">Official site →</a>
+        </div>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-name-row">
+          <div class="tool-name notranslate" translate="no">Stable Diffusion</div>
+          <div class="tool-type">Image generation</div>
+        </div>
+        <p class="tool-desc">
+          Open ecosystem for custom models, local workflows and fine-tuning by more advanced users.
+        </p>
+        <div class="tool-tags">
+          <span class="tool-tag">Open models</span>
+          <span class="tool-tag">Custom workflows</span>
+          <span class="tool-tag">Advanced users</span>
+        </div>
+        <div class="tool-links">
+          <a href="stable-diffusion-review.html">Read review →</a>
+          <a href="best-ai-image-generators.html">Category guide →</a>
+          <a href="https://stability.ai" target="_blank" rel="noopener">Official site →</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="more-row">
+      <a href="best-ai-image-generators.html">See best AI image generators →</a>
+      <a href="midjourney-vs-dalle.html">Midjourney vs DALL·E →</a>
+    </div>
+  </section>
+
+  <!-- VIDEO & AUDIO TOOLS -->
+  <section id="video-tools" class="tools-section">
+    <div class="tools-section-header">
+      <h2 class="tools-section-title">Video & audio</h2>
+      <div class="tools-section-note">Generation, editing, narration and media workflows.</div>
+    </div>
+
+    <div class="tool-grid">
+      <article class="tool-card">
+        <div class="tool-name-row">
+          <div class="tool-name notranslate" translate="no">Runway</div>
+          <div class="tool-type">Video</div>
+        </div>
+        <p class="tool-desc">
+          AI-powered video editing and generation for creative projects, social content and visual storytelling.
+        </p>
+        <div class="tool-tags">
+          <span class="tool-tag">Video editing</span>
+          <span class="tool-tag">Text-to-video</span>
+          <span class="tool-tag">Creative workflows</span>
+        </div>
+        <div class="tool-links">
+          <a href="runway-review.html">Read review →</a>
+          <a href="best-ai-video-tools.html">Category guide →</a>
+          <a href="https://runwayml.com" target="_blank" rel="noopener">Official site →</a>
+        </div>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-name-row">
+          <div class="tool-name notranslate" translate="no">ElevenLabs</div>
+          <div class="tool-type">Audio</div>
+        </div>
+        <p class="tool-desc">
+          High-quality AI voice generation and cloning for narration, videos, podcasts and audio production.
+        </p>
+        <div class="tool-tags">
+          <span class="tool-tag">AI voice</span>
+          <span class="tool-tag">Narration</span>
+          <span class="tool-tag">Voice cloning</span>
+        </div>
+        <div class="tool-links">
+          <a href="elevenlabs-review.html">Read review →</a>
+          <a href="best-ai-video-tools.html">Category guide →</a>
+          <a href="https://elevenlabs.io" target="_blank" rel="noopener">Official site →</a>
+        </div>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-name-row">
+          <div class="tool-name notranslate" translate="no">CapCut</div>
+          <div class="tool-type">Video</div>
+        </div>
+        <p class="tool-desc">
+          Popular editor with AI-powered effects, subtitles and fast social video workflows.
+        </p>
+        <div class="tool-tags">
+          <span class="tool-tag">Captions</span>
+          <span class="tool-tag">Short-form video</span>
+          <span class="tool-tag">Editing</span>
+        </div>
+        <div class="tool-links">
+          <a href="capcut-review.html">Read review →</a>
+          <a href="best-ai-video-tools.html">Category guide →</a>
+          <a href="https://www.capcut.com" target="_blank" rel="noopener">Official site →</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="more-row">
+      <a href="best-ai-video-tools.html">See best AI video tools →</a>
+    </div>
+  </section>
+
+  <!-- PRODUCTIVITY TOOLS -->
+  <section id="productivity-tools" class="tools-section">
+    <div class="tools-section-header">
+      <h2 class="tools-section-title">Productivity & workflows</h2>
+      <div class="tools-section-note">Integrations, notes, documents and automation.</div>
+    </div>
+
+    <div class="tool-grid">
+      <article class="tool-card">
+        <div class="tool-name-row">
+          <div class="tool-name">Notion AI</div>
+          <div class="tool-type">Productivity</div>
+        </div>
+        <p class="tool-desc">
+          AI inside Notion for summarising notes, drafting content and organising workspaces.
+        </p>
+        <div class="tool-tags">
+          <span class="tool-tag">Notes</span>
+          <span class="tool-tag">Docs</span>
+          <span class="tool-tag">Knowledge base</span>
+        </div>
+        <div class="tool-links">
+          <a href="notion-ai-review.html">Read review →</a>
+          <a href="best-ai-productivity-tools.html">Category guide →</a>
+          <a href="https://www.notion.so/product/ai" target="_blank" rel="noopener">Official site →</a>
+        </div>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-name-row">
+          <div class="tool-name">Google Workspace AI</div>
+          <div class="tool-type">Productivity</div>
+        </div>
+        <p class="tool-desc">
+          AI features across documents, spreadsheets, email and slides for everyday office workflows.
+        </p>
+        <div class="tool-tags">
+          <span class="tool-tag">Docs</span>
+          <span class="tool-tag">Email</span>
+          <span class="tool-tag">Slides</span>
+        </div>
+        <div class="tool-links">
+          <a href="workspace-ai-review.html">Read review →</a>
+          <a href="best-ai-productivity-tools.html">Category guide →</a>
+          <a href="https://workspace.google.com" target="_blank" rel="noopener">Official site →</a>
+        </div>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-name-row">
+          <div class="tool-name">Zapier AI</div>
+          <div class="tool-type">Workflows</div>
+        </div>
+        <p class="tool-desc">
+          Connect apps and models to automate repetitive tasks and build simple AI-powered workflows.
+        </p>
+        <div class="tool-tags">
+          <span class="tool-tag">APIs</span>
+          <span class="tool-tag">Integrations</span>
+          <span class="tool-tag">Automation</span>
+        </div>
+        <div class="tool-links">
+          <a href="zapier-ai-review.html">Read review →</a>
+          <a href="ai-workflow-guide.html">Workflow guide →</a>
+          <a href="https://zapier.com" target="_blank" rel="noopener">Official site →</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="more-row">
+      <a href="best-ai-productivity-tools.html">See best AI productivity tools →</a>
+      <a href="ai-workflow-guide.html">How to build AI workflows →</a>
+    </div>
+  </section>
+
+  <!-- MARKETING TOOLS -->
+  <section id="marketing-tools" class="tools-section">
+    <div class="tools-section-header">
+      <h2 class="tools-section-title">SEO & marketing</h2>
+      <div class="tools-section-note">Content ideas, copywriting, keyword support and optimisation.</div>
+    </div>
+
+    <div class="tool-grid">
+      <article class="tool-card">
+        <div class="tool-name-row">
+          <div class="tool-name">Jasper</div>
+          <div class="tool-type">Marketing</div>
+        </div>
+        <p class="tool-desc">
+          AI writing platform focused on marketing copy, landing pages, blog drafts and ad content.
+        </p>
+        <div class="tool-tags">
+          <span class="tool-tag">Copywriting</span>
+          <span class="tool-tag">Ads</span>
+          <span class="tool-tag">Marketing teams</span>
+        </div>
+        <div class="tool-links">
+          <a href="jasper-review.html">Read review →</a>
+          <a href="best-ai-marketing-tools.html">Category guide →</a>
+          <a href="https://www.jasper.ai" target="_blank" rel="noopener">Official site →</a>
+        </div>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-name-row">
+          <div class="tool-name">Surfer SEO</div>
+          <div class="tool-type">SEO</div>
+        </div>
+        <p class="tool-desc">
+          Supports keyword targeting, content structure and on-page SEO improvements for articles and landing pages.
+        </p>
+        <div class="tool-tags">
+          <span class="tool-tag">Keywords</span>
+          <span class="tool-tag">On-page SEO</span>
+          <span class="tool-tag">Content briefs</span>
+        </div>
+        <div class="tool-links">
+          <a href="surferseo-review.html">Read review →</a>
+          <a href="best-ai-marketing-tools.html">Category guide →</a>
+          <a href="https://surferseo.com" target="_blank" rel="noopener">Official site →</a>
+        </div>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-name-row">
+          <div class="tool-name">VWO</div>
+          <div class="tool-type">Marketing</div>
+        </div>
+        <p class="tool-desc">
+          Helps analyse experiments, landing page performance and optimization opportunities.
+        </p>
+        <div class="tool-tags">
+          <span class="tool-tag">Analytics</span>
+          <span class="tool-tag">A/B tests</span>
+          <span class="tool-tag">Conversion</span>
+        </div>
+        <div class="tool-links">
+          <a href="vwo-review.html">Read review →</a>
+          <a href="best-ai-marketing-tools.html">Category guide →</a>
+          <a href="https://vwo.com" target="_blank" rel="noopener">Official site →</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="more-row">
+      <a href="best-ai-marketing-tools.html">See best AI marketing tools →</a>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <span>© 2025 ModelPanel AI. All rights reserved.</span>
+    <span>
+      <a href="compare.html">Compare AI models</a>
+      ·
+      <a href="about.html">About &amp; Contact</a>
+    </span>
+  </footer>
+</main>
+
+</body>
+</html>
