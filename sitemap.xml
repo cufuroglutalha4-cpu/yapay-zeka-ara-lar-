@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Anasayfa -->
+  <!-- Home -->
   <url>
     <loc>https://modelpanelai.com/</loc>
     <lastmod>2025-12-08</lastmod>
   </url>
 
-  <!-- Ana sayfalar -->
+  <!-- Main pages -->
   <url>
     <loc>https://modelpanelai.com/tools.html</loc>
     <lastmod>2025-12-08</lastmod>
@@ -23,13 +23,12 @@
     <lastmod>2025-12-08</lastmod>
   </url>
 
-  <!-- Blog ana sayfası -->
   <url>
     <loc>https://modelpanelai.com/blog.html</loc>
     <lastmod>2025-12-08</lastmod>
   </url>
 
-  <!-- Blog yazıları -->
+  <!-- Blog posts -->
   <url>
     <loc>https://modelpanelai.com/blog-ai-benchmarks-explained.html</loc>
     <lastmod>2025-12-08</lastmod>
@@ -58,6 +57,159 @@
   <url>
     <loc>https://modelpanelai.com/blog-ai-prompts-10-examples.html</loc>
     <lastmod>2025-12-08</lastmod>
+  </url>
+
+  <!-- Review pages -->
+  <url>
+    <loc>https://modelpanelai.com/chatgpt-review.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/claude-review.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/gemini-review.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/copilot-review.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/dalle-review.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/midjourney-review.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/stable-diffusion-review.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/runway-review.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/elevenlabs-review.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/capcut-review.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/notion-ai-review.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/workspace-ai-review.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/zapier-ai-review.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/jasper-review.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/surferseo-review.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/vwo-review.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <!-- Guide / category pages -->
+  <url>
+    <loc>https://modelpanelai.com/best-ai-tools.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/best-ai-chat-tools.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/best-ai-coding-tools.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/best-ai-image-generators.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/best-ai-video-tools.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/best-ai-productivity-tools.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/best-ai-marketing-tools.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/ai-workflow-guide.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <!-- Comparison / alternative pages -->
+  <url>
+    <loc>https://modelpanelai.com/chatgpt-alternatives.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/chatgpt-vs-claude.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/chatgpt-vs-gemini.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/claude-vs-gemini.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/chatgpt-vs-copilot.html</loc>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://modelpanelai.com/midjourney-vs-dalle.html</loc>
+    <lastmod>2026-03-09</lastmod>
   </url>
 
 </urlset>
